@@ -1,0 +1,19 @@
+unsigned long time = 0;
+int testVul = 42;
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Time,TestValue");
+  // Outset lap set up. Add pin back in when in use  
+  // pinMode(1, OUTPUT);
+}
+
+void loop() {
+  // put your main code hear, to run repeatedly
+  Serial.print(time);
+  Serial.print(",");
+  Serial.print(testVul);
+  Serial.println();
+  time ++;
+  delay(1000); // Adjust for your data collection interval
+}
